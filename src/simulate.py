@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as stats
 import sys
 
-def generate_true_parameters(): # used ChatGPT to help outline this file
+def generate_true_parameters(): # used ChatGPT to help outline this file 
     a = np.random.uniform(0.5, 2.0)
     v = np.random.uniform(0.5, 2.0)
     t = np.random.uniform(0.1, 0.5)
@@ -26,8 +26,8 @@ def simulate_and_print(N, iterations=1000):
         a, v, t = generate_true_parameters()
         R_pred, M_pred, V_pred = forward_equations(a, v, t)
         R_obs, M_obs, V_obs = sample_observed_statistics(R_pred, M_pred, V_pred, N)
-        print(f"{a},{v},{t},{R_obs},{M_obs},{V_obs}")  # Print instead of writing to a file
-
+        print(f"{a},{v},{t},{R_obs},{M_obs},{V_obs}") 
+        
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python3 src/simulate.py <N> <iterations>")
