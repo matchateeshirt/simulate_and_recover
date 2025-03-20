@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as stats
 import sys
 
-def generate_true_parameters():
+def generate_true_parameters(): # used ChatGPT to help outline this file
     a = np.random.uniform(0.5, 2.0)
     v = np.random.uniform(0.5, 2.0)
     t = np.random.uniform(0.1, 0.5)
