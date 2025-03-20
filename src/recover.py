@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 
-def inverse_equations(R_obs, M_obs, V_obs):
+def inverse_equations(R_obs, M_obs, V_obs): # used ChatGPT to format + debug 
     """Recover parameters using inverse EZ equations."""
     if not (0 < R_obs < 1):  
         print(f"Warning: R_obs out of bounds: {R_obs}")  
@@ -41,7 +41,7 @@ def recover_parameters_from_file(input_file, output_file):
             a_est, v_est, t_est = inverse_equations(R_obs, M_obs, V_obs)
             if not np.isnan(a_est):
                 f_out.write(f"{a_est},{v_est},{t_est}\n")  
-                print(f"DEBUG: {a_est},{v_est},{t_est}")  # Debugging output
+                print(f"DEBUG: {a_est},{v_est},{t_est}")  
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
